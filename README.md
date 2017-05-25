@@ -1,7 +1,7 @@
 ## Conkor
 
 [![Build Status](https://travis-ci.org/escapecode/conkor.png)](https://travis-ci.org/escapecode/conkor)
-
+[![screenshot](https://github.com/escapecode/conkor/blob/master/conkor.jpg)](https://raw.github.com/wiki/escapecode/conkor/blob/master/conkor.jpg)
 **Conkor** is a free, light-weight desktop widget using Conky, using xdotool for interaction.  Most of the features of Conky and xdotool are utilized, so the code developed can be used for referential purposes.
 
 ### Features
@@ -29,6 +29,12 @@ Conkor's documentation. Quick links:
 * [Configure](https://github.com/escapecode/conkor/wiki/Configuration-Settings)
 * [User Configs](https://github.com/escapecode/conkor/wiki/User-Configs)
 * [Frequently Asked Questions](https://github.com/escapecode/conkor/wiki/FAQ)
+
+### Todo
+* Add hotspot click to start task manager when over top
+* Add hot spot and updated image to show webcam screenshot (e.g. datacenter, front door, etc.)
+* Add forecasts and link to eather site
+* heat graphs for things like disk utilization
 
 ### License
 
