@@ -36,6 +36,7 @@ Conkor's documentation. Quick links:
 ### Todo
 * Add hotspot click to start task manager when over top
 * Add hot spot and updated image to show webcam screenshot (e.g. datacenter, front door, etc.)
+* Update install path
 * Add forecasts and link to eather site
 * heat graphs for things like disk utilization
 * not sure if should be a part of Conky / Lua, but maybe add notifications (low disk spac, file mount, logging, etc.)
