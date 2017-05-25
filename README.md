@@ -16,7 +16,7 @@ Note that xdotool does not use behave mouse_click, since mouse_click does not ap
 Grab the [latest release from GitHub](https://github.com/escapecode/conkor/releases/latest).
 ### Screenshots
 
-[![screenshot](https://github.com/escapecode/conkor/conkor.jpg)](https://raw.github.com/wiki/escapecode/conkor/conkor.jpg)
+[![screenshot](https://github.com/escapecode/conkor/blob/master/conkor.jpg)](https://raw.github.com/wiki/escapecode/conkor/blob/master/conkor.jpg)
 
 See the [User Configs](https://github.com/escapecode/conkor/wiki/User-Configs) section of the wiki for more
 
