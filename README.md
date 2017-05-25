@@ -1,7 +1,10 @@
 ## Conkor
 
 [![Build Status](https://travis-ci.org/escapecode/conkor.png)](https://travis-ci.org/escapecode/conkor)
+
+
 [![screenshot](https://github.com/escapecode/conkor/blob/master/conkor.jpg)](https://raw.github.com/wiki/escapecode/conkor/blob/master/conkor.jpg)
+
 **Conkor** is a free, light-weight desktop widget using Conky, using xdotool for interaction.  Most of the features of Conky and xdotool are utilized, so the code developed can be used for referential purposes.
 
 ### Features
