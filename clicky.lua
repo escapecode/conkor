@@ -1,5 +1,8 @@
 
-myTable = {
+ROOT_WINDOW = "ROX-Filer"
+CONKOR_PATH = "/etc/conky/conkor"
+
+myProcesses = {
 	hiawatha = {
 		itemX = 9,
 		itemY = 33,
@@ -41,6 +44,36 @@ myTable = {
 		itemY = 33,
 		start ="su -c '/usr/bin/ciwiki -a' - spot",
 		stop = "killall ciwiki"
+	},
+	weather = {
+		itemX = 251,
+		itemY = 64,
+		start ="/usr/bin/googlechrome --window-size=300,300 -app='https://www.google.com/search?sclient=psy-ab&site=&source=hp&btnG=Search&q=weather'",
+		stop = ""
+	},
+	processes = {
+		itemX = 8,
+		itemY = 137,
+		start ="lxtask",
+		stop = ""
+	},
+	stocks = {
+		itemX = 8,
+		itemY = 300,
+		start ="/usr/bin/googlechrome --window-size=300,300 -app='https://www.google.com/finance/'",
+		stop = ""
+	},
+	news = {
+		itemX = 8,
+		itemY = 375,
+		start ="/usr/bin/googlechrome --window-size=300,300 -app='https://news.google.com'",
+		stop = ""
+	},
+	picture = {
+		itemX = 240,
+		itemY = 150,
+		start ="/usr/bin/googlechrome --window-size=300,300 -app='https://upload.wikimedia.org/wikipedia/commons/a/a9/R_Systems_Data_Center.jpg'",
+		stop = ""
 	}
 }
 
@@ -70,11 +103,11 @@ function setup_xdotool()
 	--if #arg == 0  then
 		--print('no arguments so restarting xdotool')
 		--os.execute("killall xdotool && echo 'xdotool stopping' &")
-		--os.execute("xdotool search --class 'Conky' behave %@ focus exec lua /etc/conky/clicky.lua go && echo 'xdotool starting' &")
+		--os.execute("xdotool search --class 'Conky' behave %@ focus exec lua " .. CONKOR_PATH .. "/clicky.lua go && echo 'xdotool starting' &")
 	--else
 		if runOSCommand("ps -ef | grep xdotool | grep -v grep | awk '{print $2}'", false) == '' then
 			print('xdotool not running, restarting')
-			os.execute("xdotool search --class 'Conky' behave %@ focus exec lua /etc/conky/clicky.lua")
+			os.execute("xdotool search --class 'Conky' behave %@ focus exec lua " .. CONKOR_PATH .. "/clicky.lua")
 		else
 			print("xdotool already running " .. runOSCommand("ps -ef | grep xdotool | grep -v grep | awk '{print $2}'", false))
 		end
@@ -87,7 +120,7 @@ function go()
 
 	mouseX, mouseY=getMouseCoords()
 
-	for key, value in pairs(myTable) do
+	for key, value in pairs(myProcesses) do
 		print(key .. ' (' .. value['itemX'] .. ':' .. value['itemY'] .. ') - (' .. mouseX .. ':' .. mouseY .. ')')
 
 		if mouseX >= value['itemX'] and mouseX <= (value['itemX'] + width) and mouseY >= value['itemY'] and mouseY <= (value['itemY'] + height) then
@@ -98,13 +131,14 @@ function go()
 end
 
 function handleProcess(process_name)
+	runOSCommand("xdotool search --onlyvisible " .. ROOT_WINDOW .. " windowfocus $@")
 	pid = runOSCommand("netstat -tupan | grep " .. process_name .. " | grep LISTEN | awk '{print $7}' | cut -d/ -f1")
 	if pid == nil or pid == '' then
-		print(myTable[process_name]['start'])
-		runOSCommand(myTable[process_name]['start'] .. " & ")
+		print(myProcesses[process_name]['start'])
+		runOSCommand(myProcesses[process_name]['start'] .. " & ")
 	else
-		print(myTable[process_name]['stop'])
-		runOSCommand(myTable[process_name]['stop'])
+		print(myProcesses[process_name]['stop'])
+		runOSCommand(myProcesses[process_name]['stop'])
 	end
 end
 

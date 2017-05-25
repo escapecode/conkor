@@ -28,8 +28,8 @@ end
 
 function conky_image()
 	--getweatherimage()
-	--local show = imlib_load_image("/tmp/path-close.jpg")
-	local show = imlib_load_image("/usr/share/backgrounds/default.png")
+	--local show = imlib_load_image("/usr/share/backgrounds/default.png")
+	local show = imlib_load_image("/etc/conky/conkor/cam.jpg")
 	if show == nil then return end
 	imlib_context_set_image(show)
 	imlib_context_set_image(show)

@@ -1,0 +1,12 @@
+conkor is a desktop widget utilizing Conky and xdotool.
+
+What makes it unique, is that the widget is interactive
+and connects to many sources
+
+Some hot spots are:
+* pink/green process names
+* weather image (takes to weather URL)
+* picture (takes to defined website)
+* "News" menu label (takes to online news)
+* "Market Watch" (takes to online stock information)
+* "Proc" menu label brings up task manager

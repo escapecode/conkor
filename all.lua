@@ -1,4 +1,4 @@
-package.path = "/etc/conky/?.lua"
+package.path = "/etc/conky/conkor/?.lua"
 require 'rings' --for scriptA.lua ".lua" is not required here
 require 'imageloader'
 

@@ -1,0 +1,9 @@
+INSTALL
+	copy all files to /etc/conky/conkor/
+
+RUN
+	run conky -c /etc/conky/conkor/conky.conf
+
+NOTES
+
+use included conky.conf for referential purposes if you will modify existign conky.conf
