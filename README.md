@@ -5,16 +5,15 @@
 
 [![screenshot](https://github.com/escapecode/conkor/blob/master/conkor.jpg)](https://raw.github.com/wiki/escapecode/conkor/blob/master/conkor.jpg)
 
-**Conkor** is a free, light-weight desktop widget using Conky, using xdotool for interaction.  Most of the features of Conky and xdotool are utilized, so the code developed can be used for referential purposes.
+**Conkor** is a free, light-weight desktop widget using Conky and xdotool for interaction.  There is a bunch of Conky, LUa and xdotool coding utilized, making this widget valuable for use as well as code referencing.
 
 ### Features
 * RSS news
 * Weather feed with images
-* Lua
-* Lua Cairo graphics
+* Lua coding with Cairo graphics, internet connections, etc.
 * xdotool interaction to administer services
 
-Note that xdotool does not use behave mouse_click, since mouse_click does not appear to be stable.  Focus is used and provides similar functionality
+Valuable note:  Conkor does not use xdotool's "behave mouse_click" functionality, since it is non-consistent and unstable.  "behave focus" is used and provides similar functionality
 
 Grab the [latest release from GitHub](https://github.com/escapecode/conkor/releases/latest).
 ### Screenshots
@@ -34,10 +33,7 @@ Conkor's documentation. Quick links:
 * [Frequently Asked Questions](https://github.com/escapecode/conkor/wiki/FAQ)
 
 ### Todo
-* Add hotspot click to start task manager when over top
-* Add hot spot and updated image to show webcam screenshot (e.g. datacenter, front door, etc.)
-* Update install path
-* Add forecasts and link to eather site
+* forecasts and link to eather site
 * heat graphs for things like disk utilization
 * not sure if should be a part of Conky / Lua, but maybe add notifications (low disk spac, file mount, logging, etc.)
 
@@ -58,8 +54,9 @@ To submit code changes, please open pull requests against [the GitHub repository
  * Any new source files should include a GPLv3 license header
  * Any contributed code must be GPLv3 licensed
 
-[luawiki]: http://en.wikipedia.org/wiki/Lua_%28programming_language%29
 [wiki]: https://github.com/escapecode/conkor/wiki
-[lists]: http://sourceforge.net/mail/?group_id=143975
+[conky]:http://conky.sourceforge.net/variables.html
+[xdotool]: https://www.semicomplete.com/projects/xdotool/xdotool.xhtml
+[luawiki]: http://en.wikipedia.org/wiki/Lua_%28programming_language%29
 [Imlib2]: http://docs.enlightenment.org/api/imlib2/html/
 [cairo]: http://www.cairographics.org/
